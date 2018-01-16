@@ -1,0 +1,25 @@
+.header {
+  padding: 12px 0;
+  background: #252525;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__image {
+    margin-right: 10px;
+  }
+}

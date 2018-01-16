@@ -1,0 +1,36 @@
+.department {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  &__image {
+    position: relative;
+
+    > img {
+      display: block;
+    }
+  }
+
+  &__color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0
+  }
+
+  &:hover &__color {
+    opacity: 0.6;
+  }
+
+  &__title {
+    margin-top: 15px;
+    color: #3b3b3b;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

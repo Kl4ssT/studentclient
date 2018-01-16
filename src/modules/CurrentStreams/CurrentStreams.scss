@@ -1,0 +1,32 @@
+.current-streams {
+  background-image: url('/images/current-stream-bg.jpg');
+  background-size: cover;
+
+  &__main {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+
+    iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__other {
+    display: flex;
+    margin-top: 30px;
+
+    &-link {
+      margin-right: 90px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

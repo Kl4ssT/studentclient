@@ -1,0 +1,42 @@
+.video {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  img {
+    display: block;
+  }
+
+  &__thumbnail {
+
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    background: rgba(#000, 0.8);
+    font-size: 14px;
+  }
+}
+
+.decorator {
+  border: 0;
+  background: none;
+  font-size: 40px;
+  cursor: pointer;
+  outline: none;
+
+  &.hidden {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.slider-list {
+  height: 180px !important;
+}

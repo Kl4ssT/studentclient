@@ -1,0 +1,31 @@
+.teacher {
+  display: flex;
+  position: relative;
+
+  &__photo {
+    display: block;
+  }
+
+  &__info {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, 0.5);
+    padding: 30px;
+    opacity: 0;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &:hover &__info {
+    opacity: 1;
+  }
+}
