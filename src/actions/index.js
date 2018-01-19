@@ -1,4 +1,4 @@
-import { GET_DEPARTMENTS, GET_DEPARTMENT, GET_TEACHER, GET_VIDEOS, GET_STREAMS, GET_VIDEO } from '../actionTypes';
+import { GET_DEPARTMENTS, GET_DEPARTMENT, GET_TEACHER, GET_VIDEOS, GET_STREAMS, GET_VIDEO, GET_TEACHERS } from '../actionTypes';
 import api from '../api';
 
 export const getDepartments = () => {
@@ -28,8 +28,10 @@ export const getDepartment = (id) => {
         try
         {
             const department = await api.get(`/departments/${id}`);
+            const teachers = await api.get(`/teachers/department/${id}`);
 
             dispatch(initDepartment(department.data));
+            dispatch(initTeachers(teachers.data));
         }
         catch (e)
         {
@@ -42,6 +44,13 @@ const initDepartment = (department) => {
     return {
         type: GET_DEPARTMENT,
         payload: department
+    }
+};
+
+const initTeachers = (teachers) =>  {
+    return {
+        type: GET_TEACHERS,
+        payload: teachers
     }
 };
 

@@ -23,6 +23,10 @@
     opacity: 0
   }
 
+  &__title {
+    margin-left: 10px;
+  }
+
   &:hover &__color {
     opacity: 0.6;
   }

@@ -63,17 +63,16 @@ class CurrentStreams extends Component
         let otherStreams = [];
 
         if (streams.length > 0) {
-            mainStream = streams.shift();
+            mainStream = streams[0];
 
-            otherStreams = streams;
+            otherStreams = streams.slice(1, streams.length);
         }
-
-        console.log(otherStreams);
 
         return (
             <section className="current-streams">
                 <div className="container">
                     <Title icon={<img src="images/icon-streams.png" alt="" />}>Текущие трансляции</Title>
+                    {streams.length === 0 ? <Preloader /> : null}
                     <MainStream stream={mainStream} />
                     <OtherStreams streams={otherStreams} />
                 </div>
@@ -81,6 +80,14 @@ class CurrentStreams extends Component
         );
     }
 }
+
+const Preloader = (props) => {
+    return (
+        <div className="preloader">
+            Загрузка...
+        </div>
+    );
+};
 
 export const mapStateToProps = (state) => {
     return {

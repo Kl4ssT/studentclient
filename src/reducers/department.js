@@ -1,4 +1,4 @@
-import { GET_DEPARTMENT } from '../actionTypes';
+import {GET_DEPARTMENT, GET_TEACHERS} from '../actionTypes';
 
 const initialState = {
     Teachers: []
@@ -7,7 +7,9 @@ const initialState = {
 export default (state = initialState, action) => {
     switch(action.type) {
         case GET_DEPARTMENT:
-            return action.payload;
+            return Object.assign({}, action.payload, { Teachers: [] });
+        case GET_TEACHERS:
+            return Object.assign({}, state, { Teachers: action.payload });
         default:
             return state;
     }

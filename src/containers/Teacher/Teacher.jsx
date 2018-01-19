@@ -17,6 +17,7 @@ class Teacher extends Component
 
     componentDidMount()
     {
+        document.querySelector('body').scrollTop = 0;
         this.props.getTeacher(this.props.match.params.id);
     }
 
