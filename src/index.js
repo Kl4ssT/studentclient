@@ -1,4 +1,4 @@
-window.ApiUrl = 'http://localhost:8090/';
+window.ApiUrl = 'http://31.31.203.89:8090/';
 
 import React from 'react';
 import { render } from 'react-dom';
