@@ -7,7 +7,7 @@ import Department from './Department';
 import './Departments.scss';
 
 import '../../images/icon-departments.png';
-import * as departmentsActions from '../../actions/index';
+import * as departmentsActions from '../../actions';
 
 class Departments extends Component
 {

@@ -1,4 +1,7 @@
-import { GET_DEPARTMENTS, GET_DEPARTMENT, GET_TEACHER, GET_VIDEOS, GET_STREAMS, GET_VIDEO, GET_TEACHERS } from '../actionTypes';
+import {
+    GET_DEPARTMENTS, GET_DEPARTMENT, GET_TEACHER, GET_VIDEOS, GET_STREAMS, GET_VIDEO, GET_TEACHERS,
+    GET_PAGE
+} from '../actionTypes';
 import api from '../api';
 
 export const getDepartments = () => {
@@ -129,4 +132,39 @@ const initVideo = (video) => {
         type: GET_VIDEO,
         payload: video
     }
-}
+};
+
+export const getAboutPage = () => {
+    return async (dispatch) => {
+        try
+        {
+            const page = await api.get('/page/about');
+            dispatch(initPage(page.data));
+        }
+        catch (e)
+        {
+            console.log(e);
+        }
+    };
+};
+
+const initPage = (page) => {
+    return {
+        type: GET_PAGE,
+        payload: page
+    };
+};
+
+export const getContactsPage = () => {
+    return async (dispatch) => {
+        try
+        {
+            const page = await api.get('/page/contacts');
+            dispatch(initPage(page.data));
+        }
+        catch (e)
+        {
+            console.log(e);
+        }
+    };
+};

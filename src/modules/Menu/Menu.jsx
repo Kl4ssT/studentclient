@@ -8,10 +8,8 @@ const Menu = (props) => {
         <nav className="menu">
             <ul className="menu__list">
                 <li className="menu__item"><Link className="menu__link" to="/">Главная</Link></li>
-                <li className="menu__item"><Link className="menu__link" to="/">Трансляции</Link></li>
-                <li className="menu__item"><Link className="menu__link" to="/">Кафедры</Link></li>
-                <li className="menu__item"><Link className="menu__link" to="/">О нас</Link></li>
-                <li className="menu__item"><Link className="menu__link" to="/">Контакты</Link></li>
+                <li className="menu__item"><Link className="menu__link" to="/about">О нас</Link></li>
+                <li className="menu__item"><Link className="menu__link" to="/contacts">Контакты</Link></li>
             </ul>
         </nav>
     );

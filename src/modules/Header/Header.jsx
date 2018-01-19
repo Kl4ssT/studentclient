@@ -21,7 +21,7 @@ class Header extends Component
                                 Student Portal
                             </Link>
                         </div>
-                        {/*<Menu />*/}
+                        <Menu />
                     </div>
                 </div>
             </header>
