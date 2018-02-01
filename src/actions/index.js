@@ -168,3 +168,17 @@ export const getContactsPage = () => {
         }
     };
 };
+
+export const addSubscriber = (data) => {
+    return async (dispatch) => {
+        try
+        {
+            console.log('asdf');
+            const subscribe = await api.post('/subscribe', data);
+        }
+        catch (e)
+        {
+            console.log(e);
+        }
+    }
+};

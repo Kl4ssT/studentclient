@@ -8,7 +8,7 @@ class Page extends Component {
 
         return (
             <div className="page">
-                <Title dark={true} icon={<img src="images/icon-departments.png" alt="" />}>{page.title}</Title>
+                <Title dark={true} icon={<img src="/icon-departments.png" alt="" />}>{page.title}</Title>
                 <div className="page__container">{page.content}</div>
             </div>
         );

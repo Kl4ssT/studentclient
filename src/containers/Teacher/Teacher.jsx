@@ -3,6 +3,7 @@ import * as Actions from "../../actions";
 import { bindActionCreators } from "redux";
 import Title from "../../components/Title";
 import Videos from '../../modules/Videos';
+import Subscribe from '../../modules/Subscribe';
 
 import './Teacher.scss';
 
@@ -30,10 +31,10 @@ class Teacher extends Component
         return (
             <section className="teacher-page">
                 <div className="container">
-                    <Title icon={<img src="/images/icon-departments.png" alt=""/>} dark={true}>{teacher.info.name}</Title>
+                    <Title icon={<img src="/icon-departments.png" alt=""/>} dark={true}>{teacher.info.name}</Title>
                     <div className="teacher-page__container">
                         <div className="teacher-page__info">
-                            <div className="teacher-page__photo"><img src={window.ApiUrl + teacher.info.photo} alt=""/></div>
+                            <div className="teacher-page__photo"><img src={"/" + teacher.info.photo} alt=""/></div>
                             <div className="teacher-page__description">{teacher.info.description}</div>
                         </div>
                         <section className="teacher-page__stream">
@@ -43,8 +44,12 @@ class Teacher extends Component
                             </div>
                         </section>
                         <section className="teacher-page__videos">
-                            <Title icon={<img src="/images/icon-streams.png" alt=""/>} dark={true}>Предыдущие трансляции</Title>
+                            <Title icon={<img src="/icon-streams.png" alt=""/>} dark={true}>Предыдущие трансляции</Title>
                             { videos }
+                        </section>
+                        <section className="teacher-page__subscribe">
+                            <Title icon={<img src="/icon-departments.png" alt=""/>} dark={true}>Подписаться на трансляции</Title>
+                            <Subscribe teacherId={teacher.info.id} />
                         </section>
                     </div>
                 </div>

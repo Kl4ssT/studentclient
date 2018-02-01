@@ -17,7 +17,7 @@ class Header extends Component
                     <div className="header__container">
                         <div className="logo">
                             <Link className="logo__link" to="/">
-                                <img className="logo__image" src="/images/logo.png" alt="" width="30" />
+                                <img className="logo__image" src="/logo.png" alt="" width="30" />
                                 Student Portal
                             </Link>
                         </div>

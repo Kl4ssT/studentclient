@@ -29,7 +29,7 @@ class Department extends Component
         return (
             <section className="department-page">
                 <div className="container">
-                    <Title icon={<img src="/images/icon-departments.png" alt="" />} dark={true}>{department.title}</Title>
+                    <Title icon={<img src="/icon-departments.png" alt="" />} dark={true}>{department.title}</Title>
                     <div className="department-page__teachers">
                         {department.Teachers.map((item, index) => <Teacher {...item} key={index} />)}
                     </div>

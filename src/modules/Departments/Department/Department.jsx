@@ -7,9 +7,9 @@ const Department = (props) => {
     const { department } = props;
 
     return (
-        <Link to={'department/' + department.id} className="department">
+        <Link to={'/department/' + department.id} className="department">
             <span className="department__image">
-                <img src={window.ApiUrl + department.image} alt=""/>
+                <img src={"/" + department.image} alt=""/>
                 <span className="department__color" style={{backgroundColor: '#' + department.color}} />
             </span>
             <span className="department__title">{department.title}</span>

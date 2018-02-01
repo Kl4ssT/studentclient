@@ -30,7 +30,7 @@ class Departments extends Component
         return (
             <section className="departments">
                 <div className="container">
-                    <Title dark={true} icon={<img src="images/icon-departments.png" alt="" />}>Кафедры</Title>
+                    <Title dark={true} icon={<img src="/icon-departments.png" alt="" />}>Кафедры</Title>
                     {departmentsItems}
                 </div>
             </section>

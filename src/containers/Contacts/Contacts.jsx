@@ -18,7 +18,7 @@ class Contacts extends Component {
         return (
             <section className="page">
                 <div className="container">
-                    <Title dark={true} icon={<img src="images/icon-departments.png" alt="" />}>{page.title}</Title>
+                    <Title dark={true} icon={<img src="/icon-departments.png" alt="" />}>{page.title}</Title>
                     <div className="page__container" dangerouslySetInnerHTML={{__html: page.content}} />
                 </div>
             </section>

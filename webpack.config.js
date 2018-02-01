@@ -16,7 +16,7 @@ module.exports = {
     ],
     devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
     output: {
-        filename: 'bundle.js',
+        filename: 'client.js',
         path: path.join(PATHS.build),
         publicPath: '/'
     },
@@ -62,11 +62,11 @@ module.exports = {
         new htmlPlugin({
             template: path.join(PATHS.source, 'index.html'),
             files: {
-                js: ['bundle.js'],
-                css: ['styles.css']
+                js: ['js/client.js'],
+                css: ['css/client.css']
             }
         }),
-        new extractTextPlugin('styles.css'),
+        new extractTextPlugin('css/client.css'),
         new googleFontsPlugin({
             fonts: [
                 { family: "Montserrat" }

@@ -26,7 +26,7 @@ class Video extends Component
         return (
             <section className="video-page">
                 <div className="container">
-                    <Title icon={<img src="/images/icon-streams.png" alt=""/>} dark={true}>{video.title}</Title>
+                    <Title icon={<img src="icon-streams.png" alt=""/>} dark={true}>{video.title}</Title>
                     <div className="video-page__container">
                         <iframe allowFullScreen={true} frameBorder="0" src={'//www.youtube.com/embed/' + video.id} />
                     </div>

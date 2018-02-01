@@ -31,7 +31,7 @@ const OtherStreams = (props) => {
                 { streams.map((item, index) => {
                     return (
                         <Link key={index} to={'/video/' + item.videoId} className="current-streams__other-link">
-                            <img src={item.thumbnail} alt="" />
+                            <img src={"/" + item.thumbnail} alt="" />
                         </Link>
                     );
                 }) }
@@ -71,7 +71,7 @@ class CurrentStreams extends Component
         return (
             <section className="current-streams">
                 <div className="container">
-                    <Title icon={<img src="images/icon-streams.png" alt="" />}>Текущие трансляции</Title>
+                    <Title icon={<img src="/icon-streams.png" alt="" />}>Текущие трансляции</Title>
                     {streams.length === 0 ? <Preloader /> : null}
                     <MainStream stream={mainStream} />
                     <OtherStreams streams={otherStreams} />

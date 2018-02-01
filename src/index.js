@@ -1,5 +1,3 @@
-window.ApiUrl = 'http://31.31.203.89:8090/';
-
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
